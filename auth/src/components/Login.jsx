@@ -26,17 +26,17 @@ const navigator=useNavigate()
      setEmail('')
      setPassword('')
       };
-      const logout=async()=>{
-        try {
-            await auth.signOut()
-            alert('user logoutsucsses full')
+      // const logout=async()=>{
+      //   try {
+      //       await auth.signOut()
+      //       alert('user logoutsucsses full')
 
-            navigator('/')
-        } catch (error) {
-           console.log(error);
+      //       navigator('/')
+      //   } catch (error) {
+      //      console.log(error);
             
-        }
-      }
+      //   }
+      // }
     
       return (
         <div className="login-container">
@@ -65,8 +65,8 @@ const navigator=useNavigate()
               />
             </div>
     
-            <button type="submit">Login</button>
-            <button className="submit-btn" onClick={()=>logout()}>log out</button>
+            <button type="submit" onClick={()=>navigator('/profile')}>Login</button>
+            {/* <button className="submit-btn" onClick={()=>logout()}>log out</button> */}
 
           </form>
         </div>
